@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM debian:7.6
 MAINTAINER maintain@geneegroup.com
 
 ENV DEBIAN_FRONTEND noninteractive
