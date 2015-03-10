@@ -1,4 +1,4 @@
-Docker Hub: iamfat/gini
+Docker Hub: genee/nginx
 ===========
 
 ## Gini Environment (Gini + Composer + PHP5.5 + Nginx + SSH)
