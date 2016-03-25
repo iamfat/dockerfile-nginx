@@ -1,11 +1,10 @@
-FROM debian:7.6
-MAINTAINER maintain@geneegroup.com
+FROM alpine:3.3
+MAINTAINER iamfat@gmail.com
 
-ENV DEBIAN_FRONTEND noninteractive
+RUN apk update && apk add nginx
+ADD nginx.conf /etc/nginx
 
-RUN apt-get update && apt-get install -y nginx-light && \
-    echo 'daemon off;' >> /etc/nginx/nginx.conf
-
+VOLUME ["/etc/nginx", "/var/log/nginx"]
 EXPOSE 80
 
 CMD ["/usr/sbin/nginx"]
